@@ -1,12 +1,9 @@
+import { useFeedback } from "../FeedbackContext/FeedbackContext.js";
 import { StatsList, StatsItem } from "./Statistics.styled.js";
 
-export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
-}) => {
+export const Statistics = () => {
+  const { good, neutral, bad, total, positivePercentage } = useFeedback();
+
   return (
     <StatsList>
       <StatsItem>Good: {good}</StatsItem>
